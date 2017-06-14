@@ -1,0 +1,35 @@
+{"projects": [{
+  "title": "Clean Water Initiative",
+  "category": "charity",
+  "founder": "Stu Goodheart",
+  "goal": "2000",
+  "fund": "0",
+  "plan": "Fix the pipes!",
+  "perk": "Clean water and a T-shirt"
+  }, {
+  "title": "Dirty Water Initiative",
+  "category": "idea",
+  "founder": "Shady Robby",
+  "goal": "5000",
+  "fund": "0",
+  "plan": "Destroy Stu's work",
+  "perk": "destruction is fun"
+  }, {
+  "title": "Hobby Lobby Clone",
+  "category": "project",
+  "founder": "Martin Ruiz",
+  "goal": "500",
+  "fund": "0",
+  "plan": "Find out what Hobby Lobby sells",
+  "perk": "none"
+  }, {
+  "title": "On Fire Circus",
+  "category": "project",
+  "founder": "Clowny McClown",
+  "goal": "10000",
+  "fund": "0",
+  "plan": "Buy animals, find derelicts for clowns, make money",
+  "perk": "golden pin"
+  }]
+
+}
