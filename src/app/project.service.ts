@@ -19,6 +19,14 @@ export class ProjectService {
     projectEntryInFirebase.update({title: localUpdatedProject.title, category: localUpdatedProject.category, founder: localUpdatedProject.founder, goal: localUpdatedProject.goal, plan: localUpdatedProject.plan, perk: localUpdatedProject.perk})
   }
 
+  updateFund(fundToAddTo, amountToAdd) {
+    var formatAmount = parseInt(amountToAdd);
+    var finalAmount: number = formatAmount + fundToAddTo.fund;
+    var projectEntryInFirebase = this.getProjectById(fundToAddTo.$key);
+
+    projectEntryInFirebase.update({fund: finalAmount});
+  }
+
   deleteProject(localProjectToDelete) {
     var projectEntryInFirebase = this.getProjectById(localProjectToDelete.$key);
     projectEntryInFirebase.remove();

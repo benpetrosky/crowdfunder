@@ -4,6 +4,7 @@ import { AdminComponent } from './admin/admin.component';
 import { ProjectListComponent } from './project-list/project-list.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
+import { FundFormComponent } from './fund-form/fund-form.component';
 
 const appRoutes: Routes = [
   {
@@ -18,7 +19,10 @@ const appRoutes: Routes = [
   },{
     path: 'projects/:id',
     component: ProjectDetailComponent
-  }
+  },{
+    path: 'fund',
+    component: FundFormComponent
+  },
 
 ];
 

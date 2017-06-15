@@ -1,7 +1,8 @@
 <div class="well">
-  <h3>{{(projectToDisplay | async)?.title}}</h3>
-  <h4>{{(projectToDisplay | async)?.founder}}</h4>
+  <h3>{{(projectToDisplay)?.title}}</h3>
+  <h4>{{(projectToDisplay)?.founder}}</h4>
   <hr>
-  <h4>{{(projectToDisplay | async)?.goal}}</h4>
-  <p>{{(projectToDisplay | async)?.plan}}</p>
+  <h4>{{(projectToDisplay)?.goal}}</h4>
+  <p>{{(projectToDisplay)?.plan}}</p>
+  <app-fund-form [selectedProject]="projectToDisplay"></app-fund-form>
 </div>
