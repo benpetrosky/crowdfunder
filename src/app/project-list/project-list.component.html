@@ -1,11 +1,22 @@
 <h3>Project List</h3>
 
-<div *ngFor ="let project of projects | async" class="panel panel-default">
+<select (change)="onChange($event.target.value)">
+  <option value="allProjects">All Projects</option>
+  <option value="ideaProjects">Ideas</option>
+  <option value="projectProjects" selected="selected">Projects</option>
+  <option value="charityProjects" selected="selected">Charities</option>
+</select>
+
+<div *ngFor ="let project of projects | async | category:filterByCategory" class="panel panel-default">
   <div class="panel-body">
-    <h4>{{project.title}}</h4>
+    <h4 (click)="goToDetailPage(project)">{{project.title}}</h4>
     <h5>{{project.founder}}</h5>
     <h4>{{project.fund}}</h4>
-    
+    <div *ngIf="currentRoute === '/admin'">
+      {{project.plan}}
+      {{project.goal}}
+      <hr>
+      <app-edit-project [selectedProject]="project"></app-edit-project>
+    </div>
   </div>
-
 </div>

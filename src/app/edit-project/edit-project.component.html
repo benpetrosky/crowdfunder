@@ -1,0 +1,47 @@
+
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3>Edit Fundraiser</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <label>Project Title:</label>
+      <br>
+      <input [(ngModel)]="selectedProject.title">
+    </div>
+    <div>
+      <label>Category of fundraiser:</label>
+      <br>
+      <select [(ngModel)]="selectedProject.category">
+        <option value="project">Project</option>
+        <option value="idea">Idea</option>
+        <option value="charity">Charity</option>
+      </select>
+    </div>
+    <div>
+      <label>Founder:</label>
+      <br>
+      <input [(ngModel)]="selectedProject.founder">
+    </div>
+    <div>
+      <label>Fundraising goal:</label>
+      <br>
+      <input type="number" [(ngModel)]="selectedProject.goal">
+    </div>
+    <div>
+      <label>Plan:</label>
+      <br>
+      <textarea [(ngModel)]="selectedProject.plan"></textarea>
+    </div>
+    <div>
+      <label>Perk:</label>
+      <br>
+      <input [(ngModel)]="selectedProject.perk">
+    </div>
+    <button (click)="beginUpdatingProject(selectedProject)">Update</button>
+    <hr>
+    <button (click)="beginDeletingProject(selectedProject)">Delete</button>
+  </div>
+</div>

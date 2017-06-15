@@ -1,0 +1,46 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3>Add New Fundraising</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <label>Project Title:</label>
+      <br>
+      <input #newTitle>
+    </div>
+    <div>
+      <label>Category of fundraiser:</label>
+      <br>
+      <select #newCategory>
+        <option value="Project">Project</option>
+        <option value="Idea">Idea</option>
+        <option value="Charity">Charity</option>
+      </select>
+    </div>
+    <div>
+      <label>Founder:</label>
+      <br>
+      <input #newFounder>
+    </div>
+    <div>
+      <label>Fundraising goal:</label>
+      <br>
+      <input type="number" #newGoal>
+    </div>
+    <div>
+      <label>Plan:</label>
+      <br>
+      <textarea #newPlan></textarea>
+    </div>
+    <div>
+      <label>Perk:</label>
+      <br>
+      <input #newPerk>
+    </div>
+    <button (click)="submitForm(newTitle.value, newCategory.value, newFounder.value, newGoal.value, newPlan.value, newPerk.value); newTitle.value=''; newFounder.value=''; newGoal.value=''; newPlan.value=''; newPerk.value=''">Add</button>
+  </div>
+</div>
+
+<div>
+  <app-project-list></app-project-list>
+</div>

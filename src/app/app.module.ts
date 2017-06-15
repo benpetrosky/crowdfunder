@@ -9,6 +9,10 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ProjectListComponent } from './project-list/project-list.component';
+import { AdminComponent } from './admin/admin.component';
+import { ProjectDetailComponent } from './project-detail/project-detail.component';
+import { EditProjectComponent } from './edit-project/edit-project.component';
+import { CategoryPipe } from './category.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -21,7 +25,11 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     WelcomeComponent,
-    ProjectListComponent
+    ProjectListComponent,
+    AdminComponent,
+    ProjectDetailComponent,
+    EditProjectComponent,
+    CategoryPipe
   ],
   imports: [
     BrowserModule,
